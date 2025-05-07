@@ -1,0 +1,195 @@
+1. // ModelScene.tsx SANS HDR 
+
+import React from "react";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls, ContactShadows } from "@react-three/drei";
+import { useModelViewerStore } from "../../store/modelViewerStore";
+import ModelLoader from "./ModelLoader";
+
+const ModelScene: React.FC = () => {
+  const { models, selectedModelId, lightSettings, modelScale } =
+    useModelViewerStore();
+
+  const selectedModel = models.find((model) => model.id === selectedModelId);
+  const currentLightSettings = selectedModelId
+    ? lightSettings[selectedModelId]
+    : null;
+
+  if (!selectedModel || !currentLightSettings) {
+    return (
+      <div className="flex h-full items-center justify-center">
+        <p className="text-white/60">No model selected</p>
+      </div>
+    );
+  }
+
+  return (
+    <div className="w-full h-full relative">
+      <Canvas
+        shadows
+        camera={{
+          position: [0, 0, 5],
+          fov: 45,
+        }}
+        gl={{ antialias: true }}
+        className="bg-slate-950"
+      >
+        <ambientLight
+          intensity={currentLightSettings.ambient.intensity}
+          color={currentLightSettings.ambient.color}
+        />
+        {(() => {
+          const { intensity, color, rotation } =
+            currentLightSettings.directional;
+
+          // Rayon de la lumière autour du modèle
+          const radius = 10;
+          const angleInRad = (rotation ?? 0) * (Math.PI / 180);
+
+          // Tourne autour de l’axe Y
+          const x = Math.sin(angleInRad) * radius;
+          const z = Math.cos(angleInRad) * radius;
+          const y = currentLightSettings.directional.position[1];
+
+          return (
+            <directionalLight
+              intensity={intensity}
+              color={color}
+              position={[x, y, z]}
+              castShadow
+            />
+          );
+        })()}
+
+        {/* GRID  */}
+        {/* <Grid infiniteGrid cellSize={0.5} /> */}
+        <ContactShadows
+          position={[0, -1.5, 0]}
+          opacity={0.7}
+          scale={10}
+          blur={2.5}
+        />
+
+        {/* Appliquer l'échelle dynamique */}
+        <ModelLoader model={selectedModel} scale={modelScale} />
+
+        <OrbitControls
+          minDistance={modelScale / 2}
+          maxDistance={modelScale * 10}
+          enablePan={true}
+          enableZoom={true}
+          enableRotate={true}
+        />
+      </Canvas>
+    </div>
+  );
+};
+
+export default ModelScene;
+
+
+
+
+
+
+
+
+
+
+
+
+---------------
+
+2. // ModelScene.tsx AVEC HDR 
+
+import React from "react";
+import { Canvas } from "@react-three/fiber";
+import { Environment } from "@react-three/drei";
+import { ACESFilmicToneMapping, SRGBColorSpace } from "three";
+import { OrbitControls, ContactShadows } from "@react-three/drei";
+import { useModelViewerStore } from "../../store/modelViewerStore";
+import ModelLoader from "./ModelLoader";
+
+const ModelScene: React.FC = () => {
+  const { models, selectedModelId, lightSettings, modelScale } =
+    useModelViewerStore();
+
+  const selectedModel = models.find((model) => model.id === selectedModelId);
+  const currentLightSettings = selectedModelId
+    ? lightSettings[selectedModelId]
+    : null;
+
+  if (!selectedModel || !currentLightSettings) {
+    return (
+      <div className="flex h-full items-center justify-center">
+        <p className="text-white/60">No model selected</p>
+      </div>
+    );
+  }
+
+  return (
+    <div className="w-full h-full relative">
+      <Canvas
+        shadows="soft"
+        camera={{ position: [0, 0, 5], fov: 45 }}
+        gl={{ antialias: true }}
+        onCreated={({ gl }) => {
+          gl.toneMapping = ACESFilmicToneMapping;
+          gl.outputColorSpace = SRGBColorSpace;
+        }}
+      >
+        {/* ENVIRONEMENT  */}
+        <Environment preset="city" background backgroundIntensity={0.2} />
+        {/* -----  */}
+        <ambientLight
+          intensity={currentLightSettings.ambient.intensity}
+          color={currentLightSettings.ambient.color}
+        />
+        {(() => {
+          const { intensity, color, rotation } =
+            currentLightSettings.directional;
+
+          // Rayon de la lumière autour du modèle
+          const radius = 10;
+          const angleInRad = (rotation ?? 0) * (Math.PI / 180);
+
+          // Tourne autour de l’axe Y
+          const x = Math.sin(angleInRad) * radius;
+          const z = Math.cos(angleInRad) * radius;
+          const y = currentLightSettings.directional.position[1];
+
+          return (
+            <directionalLight
+              intensity={intensity}
+              color={color}
+              position={[x, y, z]}
+              castShadow
+              shadow-mapSize-width={2048}
+              shadow-mapSize-height={2048}
+              shadow-bias={-0.0001}
+            />
+          );
+        })()}
+        {/* GRID  */}
+        {/* <Grid infiniteGrid cellSize={0.5} /> */}
+        <ContactShadows
+          position={[0, -1.5, 0]}
+          opacity={0.7}
+          scale={10}
+          blur={2.5}
+        />
+        {/* Appliquer l'échelle dynamique */}
+        <ModelLoader model={selectedModel} scale={modelScale} />
+        <OrbitControls
+          minDistance={modelScale / 2}
+          maxDistance={modelScale * 10}
+          enablePan={true}
+          enableZoom={true}
+          enableRotate={true}
+        />
+      </Canvas>
+    </div>
+  );
+};
+
+export default ModelScene;
