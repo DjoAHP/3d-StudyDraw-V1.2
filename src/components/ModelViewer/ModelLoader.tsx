@@ -12,15 +12,16 @@ const ModelLoader: React.FC<ModelLoaderProps> = ({ model, ...props }) => {
   const { scene } = useGLTF(model.path);
 
   // Matériau PBR réaliste (Physically Based Rendering)
-  const pbrMaterial = useMemo(() => {
-    return new THREE.MeshStandardMaterial({
-      color: "#ffffff",
-      roughness: 0.7,
-      metalness: 0.3,
-      clearcoat: 0.5,
-      clearcoatRoughness: 0.2,
-    });
-  }, []);
+const pbrMaterial = useMemo(() => {
+  return new THREE.MeshPhysicalMaterial({
+    color: "#ffffff",
+    roughness: 0.7,
+    metalness: 0.3,
+    clearcoat: 0.5, // ✅ Valide ici
+    clearcoatRoughness: 0.2, // ✅ Valide ici
+  });
+}, []);
+
 
   // Appliquer le matériau PBR à tous les meshes
   const clonedScene = useMemo(() => {
@@ -90,6 +91,10 @@ const models = [
   "gentle_draco.glb",
   "singe01.glb",
   "torus01.glb",
+  "napoleon01.glb",
+  "drape01.glb",
+  "paris01.glb",
+  "yoda0101.glb",
 ];
 
 // Préchargement des modèles

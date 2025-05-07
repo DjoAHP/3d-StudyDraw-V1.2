@@ -109,6 +109,17 @@ export const INITIAL_MODELS: Model[] = [
     defaultScale: 0.4,
   },
   {
+    id: 'napoleon01',
+    name: 'Buste de Napoleon',
+    description: 'Napoleon bust',
+    // CDN MODEL 
+    path: `${CDN_BASE}napoleon01.glb`,
+    thumbnail: 'https://i.imgur.com/cN4siTu.jpeg',
+    defaultRotation: [0, 0, 0],
+    defaultPosition: [-1, -1, 0],
+    defaultScale: 8,
+  },
+  {
     id: 'casque01',
     name: 'Casque audio',
     description: 'Casque audio neutre',
@@ -129,6 +140,17 @@ export const INITIAL_MODELS: Model[] = [
     defaultRotation: [0, 0, 0],
     defaultPosition: [-1, -0.5, 0],
     defaultScale: 0.7,
+  },
+  {
+    id: 'yoda01',
+    name: 'Buste de Yoda',
+    description: 'Buste de Yoda',
+    // CDN MODEL 
+    path: `${CDN_BASE}yoda01.glb`,
+    thumbnail: 'https://i.imgur.com/wPCqNXA.jpeg',
+    defaultRotation: [0, 0, 0],
+    defaultPosition: [-1, -1.3, 0],
+    defaultScale: 1,
   },
   {
     id: 'roshi',
@@ -153,6 +175,17 @@ export const INITIAL_MODELS: Model[] = [
     defaultScale: 5,
   },
   {
+    id: 'paris01',
+    name: 'Paris',
+    description: 'Buste de Paris',
+    // CDN MODEL 
+    path: `${CDN_BASE}paris01.glb`,
+    thumbnail: 'https://i.imgur.com/NeJYFqG.jpeg',
+    defaultRotation: [0, 0, 0],
+    defaultPosition: [-1, -1, 0],
+    defaultScale: 1.5,
+  },
+  {
     id: 'aigle01',
     name: 'Aigle I',
     description: 'Un aigle',
@@ -162,6 +195,17 @@ export const INITIAL_MODELS: Model[] = [
     defaultRotation: [0, 0, 0],
     defaultPosition: [-1, 0.5, 0],
     defaultScale: 12,
+  },
+  {
+    id: 'drape01',
+    name: 'Drapé I',
+    description: 'Drapé',
+    // CDN MODEL 
+    path: `${CDN_BASE}drape01.glb`,
+    thumbnail: 'https://i.imgur.com/rY3M4Sb.jpeg',
+    defaultRotation: [0, 0, 0],
+    defaultPosition: [-1, -0.7, 0],
+    defaultScale: 1,
   },
   {
     id: 'singe01',
