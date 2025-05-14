@@ -95,6 +95,15 @@ const models = [
   "drape01.glb",
   "paris01.glb",
   "yoda0101.glb",
+  "figure01.glb",
+  "cheval01.glb",
+  "anubis01.glb",
+  "pirate01.glb",
+  "buda02.glb",
+  "alien01.glb",
+  "mask01.glb",
+  "pharaon01.glb",
+  "vase01.glb",
 ];
 
 // Préchargement des modèles

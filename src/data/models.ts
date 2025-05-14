@@ -34,6 +34,17 @@ export const INITIAL_MODELS: Model[] = [
     defaultScale: 70,
   },
   {
+    id: 'figure01',
+    name: 'Figure low poly',
+    description: 'Low poly Bust',
+    // CDN MODEL 
+    path: `${CDN_BASE}figure01.glb`,
+    thumbnail: 'https://i.imgur.com/a7HXzlI.png',
+    defaultRotation: [0, 0, 0],
+    defaultPosition: [-0.7, -1, 0],
+    defaultScale: 1.5,
+  },
+  {
     id: 'loomis-head',
     name: 'Loomis Head',
     description: 'Tete a dessiné',
@@ -92,7 +103,7 @@ export const INITIAL_MODELS: Model[] = [
     description: 'Bouche a dessiné',
     // CDN MODEL 
     path: `${CDN_BASE}bouche01.glb`,
-    thumbnail: 'https://i.imgur.com/DAd5SnS.png',
+    thumbnail: 'https://i.imgur.com/4lbAvA1.png',
     defaultRotation: [0, 0, 0],
     defaultPosition: [-0.5, 0, 0],
     defaultScale: 1.5,
@@ -107,6 +118,17 @@ export const INITIAL_MODELS: Model[] = [
     defaultRotation: [0, 0, 0],
     defaultPosition: [-0.5, -0.5, 0],
     defaultScale: 0.4,
+  },
+  {
+    id: 'pirate01',
+    name: 'Crane de pirate',
+    description: 'Crane réaliste de pirate',
+    // CDN MODEL 
+    path: `${CDN_BASE}pirate01.glb`,
+    thumbnail: 'https://i.imgur.com/onQRhNf.png',
+    defaultRotation: [0, 0, 0],
+    defaultPosition: [-1, -1.5, 0],
+    defaultScale: 1,
   },
   {
     id: 'napoleon01',
@@ -142,6 +164,28 @@ export const INITIAL_MODELS: Model[] = [
     defaultScale: 0.7,
   },
   {
+    id: 'mask01',
+    name: 'Samurai',
+    description: 'Masque de Samurai',
+    // CDN MODEL 
+    path: `${CDN_BASE}mask01.glb`,
+    thumbnail: 'https://i.imgur.com/qhHevHR.png',
+    defaultRotation: [0, 0, 0],
+    defaultPosition: [-1, -1, 0],
+    defaultScale: 1,
+  },
+  {
+    id: 'cheval01',
+    name: 'Cheval low poly',
+    description: 'Buste de Cheval',
+    // CDN MODEL 
+    path: `${CDN_BASE}cheval01.glb`,
+    thumbnail: 'https://i.imgur.com/9VUqh2J.png',
+    defaultRotation: [0, 0, 0],
+    defaultPosition: [-1, -1.3, 0],
+    defaultScale: 2,
+  },
+  {
     id: 'yoda01',
     name: 'Buste de Yoda',
     description: 'Buste de Yoda',
@@ -162,6 +206,28 @@ export const INITIAL_MODELS: Model[] = [
     defaultRotation: [0, 0, 0],
     defaultPosition: [-0.6, 0.2, 0],
     defaultScale: 1.4,
+  },
+  {
+    id: 'buda02',
+    name: 'Buda II',
+    description: 'Buda statue',
+    // CDN MODEL 
+    path: `${CDN_BASE}buda02.glb`,
+    thumbnail: 'https://i.imgur.com/y1Xn8E4.png',
+    defaultRotation: [0, 0, 0],
+    defaultPosition: [-1, -1, 0],
+    defaultScale: 1,
+  },
+  {
+    id: 'alien01',
+    name: 'Alien I',
+    description: 'Alien',
+    // CDN MODEL 
+    path: `${CDN_BASE}alien01.glb`,
+    thumbnail: 'https://i.imgur.com/iX1XDrj.png',
+    defaultRotation: [0, 0, 0],
+    defaultPosition: [-1, -1, 0],
+    defaultScale: 1,
   },
   {
     id: 'augustus',
@@ -230,6 +296,28 @@ export const INITIAL_MODELS: Model[] = [
     defaultScale: 3,
   },
   {
+    id: 'anubis01',
+    name: 'Anubis I',
+    description: 'Anubis bust',
+    // CDN MODEL 
+    path: `${CDN_BASE}anubis01.glb`,
+    thumbnail: 'https://i.imgur.com/9WvbADb.png',
+    defaultRotation: [0, 0, 0],
+    defaultPosition: [-1, -1, 0],
+    defaultScale: 1,
+  },
+  {
+    id: 'pharaon01',
+    name: 'Pharaon I',
+    description: 'Pharaon bust',
+    // CDN MODEL 
+    path: `${CDN_BASE}pharaon01.glb`,
+    thumbnail: 'https://i.imgur.com/3PttJgE.png',
+    defaultRotation: [0, 0, 0],
+    defaultPosition: [-1, -1, 0],
+    defaultScale: 1,
+  },
+  {
     id: 'gentle',
     name: 'Gentle',
     description: 'Gentleman bust',
@@ -239,6 +327,17 @@ export const INITIAL_MODELS: Model[] = [
     defaultRotation: [0, 0, 0],
     defaultPosition: [-1, -1.4, 0],
     defaultScale: 0.5,
+  },
+  {
+    id: 'vase01',
+    name: 'Vase I',
+    description: 'Un vase I',
+    // CDN MODEL 
+    path: `${CDN_BASE}vase01.glb`,
+    thumbnail: 'https://i.imgur.com/F7PFbir.png',
+    defaultRotation: [0, 0, 0],
+    defaultPosition: [-1, -1, 0],
+    defaultScale: 1,
   },
 ];
 
