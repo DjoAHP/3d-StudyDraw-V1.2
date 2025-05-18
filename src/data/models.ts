@@ -339,6 +339,28 @@ export const INITIAL_MODELS: Model[] = [
     defaultPosition: [-1, -1, 0],
     defaultScale: 1,
   },
+  {
+    id: 'BENK',
+    name: 'Benk',
+    description: 'Johannes Benk',
+    // CDN MODEL 
+    path: `${CDN_BASE}benk.glb`,
+    thumbnail: 'https://i.imgur.com/F7PFbir.png',
+    defaultRotation: [0, 0, 0],
+    defaultPosition: [-1, -1, 0],
+    defaultScale: 1,
+  },
+  {
+    id: 'centaure',
+    name: 'Centaure',
+    description: 'Achille & le Centaure',
+    // CDN MODEL 
+    path: `${CDN_BASE}centaur.glb`,
+    thumbnail: 'https://i.imgur.com/F7PFbir.png',
+    defaultRotation: [0, 0, 0],
+    defaultPosition: [-1, -1.5, 0],
+    defaultScale: 1,
+  },
 ];
 
 // Initial model and light settings
