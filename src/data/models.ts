@@ -98,6 +98,17 @@ export const INITIAL_MODELS: Model[] = [
     defaultScale: 1.3,
   },
   {
+    id: 'roeille01',
+    name: 'Oreille I',
+    description: 'Oreille a dessiné',
+    // CDN MODEL 
+    path: `${CDN_BASE}oreille01.glb`,
+    thumbnail: 'https://i.imgur.com/P2FFuox.png',
+    defaultRotation: [0, 0, 0],
+    defaultPosition: [-1, 0, 0],
+    defaultScale: 0.7,
+  },
+  {
     id: 'bouche01',
     name: 'Bouche I',
     description: 'Bouche a dessiné',
@@ -312,7 +323,7 @@ export const INITIAL_MODELS: Model[] = [
     description: 'Pharaon bust',
     // CDN MODEL 
     path: `${CDN_BASE}pharaon01.glb`,
-    thumbnail: 'https://i.imgur.com/3PttJgE.png',
+    thumbnail: 'https://i.imgur.com/AZihsOX.png',
     defaultRotation: [0, 0, 0],
     defaultPosition: [-1, -1, 0],
     defaultScale: 1,
@@ -345,7 +356,7 @@ export const INITIAL_MODELS: Model[] = [
     description: 'Johannes Benk',
     // CDN MODEL 
     path: `${CDN_BASE}benk.glb`,
-    thumbnail: 'https://i.imgur.com/F7PFbir.png',
+    thumbnail: 'https://i.imgur.com/KU66TYd.png',
     defaultRotation: [0, 0, 0],
     defaultPosition: [-1, -1, 0],
     defaultScale: 1,
@@ -356,7 +367,7 @@ export const INITIAL_MODELS: Model[] = [
     description: 'Achille & le Centaure',
     // CDN MODEL 
     path: `${CDN_BASE}centaur.glb`,
-    thumbnail: 'https://i.imgur.com/F7PFbir.png',
+    thumbnail: 'https://i.imgur.com/g5j4w1B.png',
     defaultRotation: [0, 0, 0],
     defaultPosition: [-1, -1.5, 0],
     defaultScale: 1,

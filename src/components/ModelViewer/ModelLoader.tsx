@@ -106,6 +106,7 @@ const models = [
   "vase01.glb",
   "benk.glb",
   "centaur.glb",
+  "oreille01.glb",
 ];
 
 // Préchargement des modèles
