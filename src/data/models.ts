@@ -98,7 +98,7 @@ export const INITIAL_MODELS: Model[] = [
     defaultScale: 1.3,
   },
   {
-    id: 'roeille01',
+    id: 'oreille01',
     name: 'Oreille I',
     description: 'Oreille a dessiné',
     // CDN MODEL 
@@ -140,6 +140,17 @@ export const INITIAL_MODELS: Model[] = [
     defaultRotation: [0, 0, 0],
     defaultPosition: [-1, -1.5, 0],
     defaultScale: 1,
+  },
+  {
+    id: 'david02',
+    name: 'Buste de David',
+    description: 'David bust',
+    // CDN MODEL 
+    path: `${CDN_BASE}david02.glb`,
+    thumbnail: 'https://i.imgur.com/OeUForv.png',
+    defaultRotation: [0, 0, 0],
+    defaultPosition: [-1, -0.8, 0],
+    defaultScale: 0.5,
   },
   {
     id: 'napoleon01',
